@@ -1,4 +1,4 @@
-# Rover-hack
+[#](#) Rover-hack
 An experimental game using WebGL and procedural terrain generation. Go [here](https://www.sharpoblunto.com/projects/block-explorer/) to see a live demo.
 
 [###](###) Building

@@ -116,7 +116,11 @@ export default class RoverSystem {
             this._keys.get('ArrowUp') || 
             this._keys.get('ArrowLeft') || 
             this._keys.get('ArrowDown') || 
-            this._keys.get('ArrowRight')
+            this._keys.get('ArrowRight') ||
+            this._keys.get('w') || 
+            this._keys.get('a') || 
+            this._keys.get('s') || 
+            this._keys.get('d')
 
         ) {
             idle = false;
@@ -130,8 +134,8 @@ export default class RoverSystem {
             
 
             const theta = (
-               (this._keys.get('ArrowLeft') ? 1 : 0)
-              -(this._keys.get('ArrowRight') ? 1 : 0) 
+               ((this._keys.get('ArrowLeft') || this._keys.get('a')) ? 1 : 0)
+              -((this._keys.get('ArrowRight') || this._keys.get('d')) ? 1 : 0) 
             ) * rotationSpeed;
             glm.quat.rotateY(rover.rotation,rover.rotation,theta);
             rover.turning = theta ? ((theta > 0) ? 1 : -1) : 0;
@@ -142,8 +146,8 @@ export default class RoverSystem {
             if (rover.surfaceNormal) {
                 const movementForce =  MOVEMENT_FORCE * (rover.boost ? BOOST_FORCE_MULTIPLIER : 1);
                 glm.vec3.scale(forward,forward, (
-                   (this._keys.get('ArrowDown') ? 1 : 0)
-                   -(this._keys.get('ArrowUp') ? 1 : 0)
+                   ((this._keys.get('ArrowDown') || this._keys.get('s')) ? 1 : 0)
+                   -((this._keys.get('ArrowUp') || this._keys.get('w')) ? 1 : 0)
                 ) * movementForce);
                 glm.vec3.add(force,force,forward);
             }
