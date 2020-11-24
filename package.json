@@ -20,7 +20,7 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-stage-0": "^6.5.0",
     "empty": "^0.10.1",
-    "flow-bin": "^0.27.0",
+    "flow-bin": "^0.138.0",
     "gl-matrix": "^2.3.2",
     "html-webpack-plugin": "^2.8.1",
     "simplex-noise": "^2.2.0",

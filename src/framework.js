@@ -150,7 +150,7 @@ export class World {
             system.render(this._glContext,alpha);
         }
     }
-    createEntity(builder: (entity: Entity,options: any) => Entity, options: any): Entity {
+    createEntity(builder: (entity: Entity, glContext: any, options: any) => Entity, options: any): Entity {
         let id: number;
         if (this._freeIds.length) {
             id = this._freeIds[this._freeIds.length - 1];

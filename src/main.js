@@ -7,7 +7,9 @@ import sims from 'sim';
 import renderers from 'render';
 
 const canvas = document.getElementById('canvas');
-canvas.focus();
+if (canvas) {
+  canvas.focus();
+}
 const gl = twgl.getWebGLContext(canvas);
 twgl.setDefaults({attribPrefix: 'a_'});
 
