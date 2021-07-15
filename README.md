@@ -1,4 +1,4 @@
-# Rover-hack
+# Block-explorer
 An experimental game using WebGL and procedural terrain generation. Go [here](https://www.sharpoblunto.com/projects/block-explorer/) to see a live demo. Move around using the arrow keys or wasd and use space for a speed boost - try and catch as many blue & red cubes as you can.
 
 ### Building
